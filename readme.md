@@ -98,7 +98,7 @@ class WarehouseApi {
     required String role,
   }) async {
     final response = await http.post(
-      Uri.parse('$baseUrl/users'),
+      Uri.parse('$baseUrl/api/v1/users'),
       headers: _jsonHeaders(),
       body: jsonEncode({
         'username': username,
@@ -132,7 +132,7 @@ class WarehouseApi {
     required int userId,
   }) async {
     final response = await http.post(
-      Uri.parse('$baseUrl/logs'),
+      Uri.parse('$baseUrl/api/v1/logs'),
       headers: _authHeaders(),
       body: jsonEncode({
         'title': title,
